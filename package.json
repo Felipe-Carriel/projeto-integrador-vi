@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/brunaandradea/projeto-integrador-vi/issues"
   },
-  "homepage": "https://github.com/brunaandradea/projeto-integrador-vi#readme"
+  "homepage": "https://github.com/brunaandradea/projeto-integrador-vi#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }

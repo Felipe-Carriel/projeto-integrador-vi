@@ -1,14 +1,28 @@
-const http = require('http');
+const express = require('express');
+const app = express();
+const PORT = 3000;
 
-const hostname = '0.0.0.0';
-const port = 3000;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain; charset=utf-8');
-  res.end('Olá, mundo do GitHub!\n');
+app.get('/', (req, res) => {
+  res.send('Servidor rodando com sucesso!');
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Servidor rodando em http://${hostname}:${port}/`);
+app.listen(PORT, () => {
+  console.log(`Servidor ativo na porta ${PORT}`);
 });
+
+app.get('/produtos', (req, res) => {
+  res.status(200).json(prod);
+});
+
+const prod = [
+  {
+    id: 1,
+    nome: 'Notebook',
+    preco: 6700
+  },
+  {
+    id: 2,
+    nome: 'Mouse',
+    preco: 120
+  }
+]
